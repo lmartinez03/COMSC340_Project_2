@@ -11,9 +11,16 @@ public class MergeSort {
 			array[i] = r.nextInt(); 										
 		}
 		
-		//calls merge sort algorithm
-		mergeArray(array.length, array); 											
+		//times the algorithm
+		long start = System.nanoTime();
 		
+		//calls merge sort algorithm
+		mergeArray(array.length, array); 	
+		
+		//ends the timer and prints it
+		long end = System.nanoTime();
+		long time = end - start;
+		System.out.println("\nThe runtime for merge sort is: " + time + " nanoseconds");
 	}	
 	
 	static void mergeArray(int len, int[] arr) {
